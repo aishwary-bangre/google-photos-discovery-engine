@@ -1,101 +1,113 @@
 {
-  "started": "2026-10-06T13:36:00.177820+00:00",
+  "started": "2026-10-06T14:13:10.789370+00:00",
   "stages": {
     "collect": {
-      "seconds": 484.3,
+      "seconds": 1032.6,
       "result": {
-        "play_store": 25984,
-        "app_store": 2500,
+        "hacker_news": 1545,
+        "play_store": 80292,
+        "app_store": 1800,
         "reddit": 0,
         "pullpush": 0,
         "external": 0
       }
     },
     "gate": {
-      "seconds": 27.6,
-      "result": 1403
+      "seconds": 87.2,
+      "result": 2500
     },
     "extract": {
-      "seconds": 862.8,
-      "result": 379
+      "seconds": 994.6,
+      "result": 2499
     },
     "cluster": {
-      "seconds": 411.8,
+      "seconds": 85.1,
       "result": {
-        "n_tagged": 379,
-        "n_relevant": 204,
-        "relevance_rate": 0.5382585751978892,
+        "n_tagged": 2499,
+        "n_relevant": 896,
+        "relevance_rate": 0.3585434173669468,
         "by_source": {
-          "play_store": 183,
-          "app_store": 21
+          "play_store": 801,
+          "hacker_news": 58,
+          "app_store": 37
         },
         "photo_type": {
-          "unspecified": 162,
-          "people_event": 14,
-          "other": 14,
-          "video": 5,
-          "screenshot_info": 4,
-          "pet": 2,
-          "travel_place": 2,
-          "document_id": 1
+          "unspecified": 658,
+          "people_event": 68,
+          "other": 66,
+          "screenshot_info": 39,
+          "travel_place": 19,
+          "video": 16,
+          "pet": 14,
+          "document_id": 7,
+          "notes_study": 5,
+          "receipt_payment": 2,
+          "food": 1,
+          "medical": 1
         },
         "failure_stage": {
-          "interpret": 54,
-          "browse": 49,
-          "unclear": 44,
-          "access": 31,
-          "express": 21,
-          "evaluate": 4,
-          "refine": 1
+          "interpret": 342,
+          "browse": 288,
+          "access": 124,
+          "express": 89,
+          "unclear": 41,
+          "evaluate": 10,
+          "refine": 2
         },
         "outcome": {
-          "gave_up": 154,
-          "found": 19,
-          "found_with_effort": 16,
-          "unknown": 15
+          "gave_up": 607,
+          "unknown": 164,
+          "found_with_effort": 118,
+          "found": 7
         },
         "workaround": {
-          "none_mentioned": 168,
-          "scroll_timeline": 19,
-          "other_app": 5,
-          "gave_up": 4,
-          "albums": 3,
-          "people_faces": 2,
-          "other": 2,
-          "date_jump": 1
+          "none_mentioned": 545,
+          "scroll_timeline": 178,
+          "gave_up": 85,
+          "other_app": 31,
+          "albums": 30,
+          "other": 17,
+          "people_faces": 6,
+          "date_jump": 2,
+          "map_location": 1,
+          "ask_someone": 1
         },
         "query_style": {
-          "none": 149,
-          "content_keyword": 28,
-          "person": 12,
-          "date_or_place": 12,
-          "context_description": 3
+          "none": 695,
+          "content_keyword": 87,
+          "person": 44,
+          "date_or_place": 44,
+          "text_ocr": 19,
+          "context_description": 7
         },
         "cues_remembered": {
-          "nothing_specific": 104,
-          "time_approx": 50,
-          "visual_content": 29,
-          "people": 12,
-          "purpose": 6,
-          "event_context": 5,
-          "source_app": 5,
-          "text_in_image": 4,
-          "place": 3,
-          "life_chapter": 1
+          "nothing_specific": 421,
+          "time_approx": 146,
+          "people": 75,
+          "source_app": 72,
+          "visual_content": 68,
+          "text_in_image": 28,
+          "event_context": 20,
+          "place": 20,
+          "purpose": 10,
+          "life_chapter": 9
         },
         "cues_missing": {
-          "nothing_specific": 137,
-          "time_approx": 3,
-          "place": 1,
-          "visual_content": 1
+          "nothing_specific": 112,
+          "time_approx": 11,
+          "place": 4,
+          "visual_content": 1,
+          "event_context": 1,
+          "people": 1,
+          "text_in_image": 1
         },
-        "n_clusters": 10,
-        "noise_share": 0.06372549019607843,
-        "quote_verified_rate": 0.9411764705882353,
+        "n_clusters": 14,
+        "noise_share": 0.14397321428571427,
+        "quote_verified_rate": 0.953125,
         "model": "gemini-2.5-flash",
         "embedding_backend": "sentence-transformers (sentence-transformers/all-MiniLM-L6-v2)"
       }
     }
   },
-  "finished": "2026-10-06T14:05:46.717538+00:00"
+  "finished": "2026-10-06T14:49:50.320795+00:00"
 }

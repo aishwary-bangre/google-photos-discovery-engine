@@ -1,0 +1,125 @@
+
+===== COLLECT =====
+[collect] hacker_news: 1545 records -> hacker_news.jsonl
+[collect] play us NEWEST: 80000
+[collect] play us MOST_RELEVANT: 3000
+[collect] play in NEWEST: 80000
+[collect] play in MOST_RELEVANT: 3000
+[collect] play_store: 80292 records -> play_store.jsonl
+[collect] app_store: 1800 records -> app_store.jsonl
+[collect] reddit https://www.reddit.com/r/googlephotos/search.json -> HTTP 403
+[collect] reddit https://old.reddit.com/r/googlephotos/search.json -> HTTP 403
+[collect] reddit https://www.reddit.com/r/googlephotos/search.json -> HTTP 403
+[collect] reddit https://old.reddit.com/r/googlephotos/search.json -> HTTP 403
+[collect] reddit https://www.reddit.com/r/googlephotos/search.json -> HTTP 403
+[collect] reddit https://old.reddit.com/r/googlephotos/search.json -> HTTP 403
+[collect] reddit https://www.reddit.com/r/googlephotos/search.json -> HTTP 403
+[collect] reddit https://old.reddit.com/r/googlephotos/search.json -> HTTP 403
+[collect] reddit appears blocked from this runner; skipping to PullPush
+[collect] reddit: 0 records -> reddit.jsonl
+[collect] pullpush: 0 records -> pullpush.jsonl
+[collect] external: 0 records -> external.jsonl
+
+===== GATE =====
+/home/runner/work/google-photos-discovery-engine/google-photos-discovery-engine/pipeline/gate.py:48: UserWarning: This pattern is interpreted as a regular expression, and has match groups. To actually get the groups, use str.extract.
+  df = df[df["full_text"].str.contains(kw)].copy()
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 3907.82it/s]
+Batches:   0%|          | 0/86 [00:00<?, ?it/s]Batches:   1%|          | 1/86 [00:02<03:27,  2.44s/it]Batches:   2%|▏         | 2/86 [00:04<03:24,  2.43s/it]Batches:   3%|▎         | 3/86 [00:07<03:21,  2.43s/it]Batches:   5%|▍         | 4/86 [00:09<03:19,  2.43s/it]Batches:   6%|▌         | 5/86 [00:12<03:16,  2.42s/it]Batches:   7%|▋         | 6/86 [00:14<03:14,  2.43s/it]Batches:   8%|▊         | 7/86 [00:17<03:12,  2.43s/it]Batches:   9%|▉         | 8/86 [00:19<03:09,  2.43s/it]Batches:  10%|█         | 9/86 [00:21<03:07,  2.44s/it]Batches:  12%|█▏        | 10/86 [00:24<03:05,  2.44s/it]Batches:  13%|█▎        | 11/86 [00:26<03:03,  2.45s/it]Batches:  14%|█▍        | 12/86 [00:29<03:01,  2.45s/it]Batches:  15%|█▌        | 13/86 [00:31<02:59,  2.45s/it]Batches:  16%|█▋        | 14/86 [00:34<02:56,  2.45s/it]Batches:  17%|█▋        | 15/86 [00:36<02:47,  2.36s/it]Batches:  19%|█▊        | 16/86 [00:38<02:39,  2.28s/it]Batches:  20%|█▉        | 17/86 [00:40<02:24,  2.09s/it]Batches:  21%|██        | 18/86 [00:41<02:12,  1.95s/it]Batches:  22%|██▏       | 19/86 [00:43<02:02,  1.83s/it]Batches:  23%|██▎       | 20/86 [00:44<01:49,  1.65s/it]Batches:  24%|██▍       | 21/86 [00:45<01:38,  1.51s/it]Batches:  26%|██▌       | 22/86 [00:46<01:31,  1.43s/it]Batches:  27%|██▋       | 23/86 [00:48<01:24,  1.35s/it]Batches:  28%|██▊       | 24/86 [00:49<01:20,  1.31s/it]Batches:  29%|██▉       | 25/86 [00:50<01:17,  1.27s/it]Batches:  30%|███       | 26/86 [00:51<01:14,  1.24s/it]Batches:  31%|███▏      | 27/86 [00:52<01:10,  1.20s/it]Batches:  33%|███▎      | 28/86 [00:53<01:10,  1.21s/it]Batches:  34%|███▎      | 29/86 [00:55<01:08,  1.19s/it]Batches:  35%|███▍      | 30/86 [00:56<01:03,  1.14s/it]Batches:  36%|███▌      | 31/86 [00:57<01:02,  1.13s/it]Batches:  37%|███▋      | 32/86 [00:58<00:59,  1.11s/it]Batches:  38%|███▊      | 33/86 [00:59<00:57,  1.08s/it]Batches:  40%|███▉      | 34/86 [01:00<00:53,  1.03s/it]Batches:  41%|████      | 35/86 [01:01<00:50,  1.01it/s]Batches:  42%|████▏     | 36/86 [01:01<00:47,  1.05it/s]Batches:  43%|████▎     | 37/86 [01:02<00:43,  1.12it/s]Batches:  44%|████▍     | 38/86 [01:03<00:41,  1.17it/s]Batches:  45%|████▌     | 39/86 [01:04<00:39,  1.18it/s]Batches:  47%|████▋     | 40/86 [01:05<00:36,  1.26it/s]Batches:  48%|████▊     | 41/86 [01:05<00:33,  1.34it/s]Batches:  49%|████▉     | 42/86 [01:06<00:31,  1.39it/s]Batches:  50%|█████     | 43/86 [01:06<00:29,  1.46it/s]Batches:  51%|█████     | 44/86 [01:07<00:28,  1.46it/s]Batches:  52%|█████▏    | 45/86 [01:08<00:26,  1.56it/s]Batches:  53%|█████▎    | 46/86 [01:08<00:24,  1.64it/s]Batches:  55%|█████▍    | 47/86 [01:09<00:22,  1.73it/s]Batches:  56%|█████▌    | 48/86 [01:09<00:20,  1.83it/s]Batches:  57%|█████▋    | 49/86 [01:10<00:20,  1.83it/s]Batches:  58%|█████▊    | 50/86 [01:10<00:19,  1.84it/s]Batches:  59%|█████▉    | 51/86 [01:11<00:17,  1.96it/s]Batches:  60%|██████    | 52/86 [01:11<00:16,  2.11it/s]Batches:  62%|██████▏   | 53/86 [01:12<00:15,  2.13it/s]Batches:  63%|██████▎   | 54/86 [01:12<00:15,  2.13it/s]Batches:  64%|██████▍   | 55/86 [01:12<00:13,  2.30it/s]Batches:  65%|██████▌   | 56/86 [01:13<00:12,  2.49it/s]Batches:  66%|██████▋   | 57/86 [01:13<00:10,  2.68it/s]Batches:  67%|██████▋   | 58/86 [01:13<00:09,  2.84it/s]Batches:  69%|██████▊   | 59/86 [01:14<00:09,  2.96it/s]Batches:  70%|██████▉   | 60/86 [01:14<00:08,  3.05it/s]Batches:  71%|███████   | 61/86 [01:14<00:07,  3.18it/s]Batches:  72%|███████▏  | 62/86 [01:14<00:07,  3.34it/s]Batches:  73%|███████▎  | 63/86 [01:15<00:06,  3.57it/s]Batches:  74%|███████▍  | 64/86 [01:15<00:06,  3.58it/s]Batches:  76%|███████▌  | 65/86 [01:15<00:05,  3.64it/s]Batches:  77%|███████▋  | 66/86 [01:15<00:05,  3.76it/s]Batches:  78%|███████▊  | 67/86 [01:16<00:04,  4.05it/s]Batches:  79%|███████▉  | 68/86 [01:16<00:04,  4.28it/s]Batches:  80%|████████  | 69/86 [01:16<00:03,  4.41it/s]Batches:  81%|████████▏ | 70/86 [01:16<00:03,  4.59it/s]Batches:  83%|████████▎ | 71/86 [01:16<00:03,  4.81it/s]Batches:  84%|████████▎ | 72/86 [01:17<00:02,  5.00it/s]Batches:  85%|████████▍ | 73/86 [01:17<00:02,  5.16it/s]Batches:  86%|████████▌ | 74/86 [01:17<00:02,  5.57it/s]Batches:  87%|████████▋ | 75/86 [01:17<00:01,  6.05it/s]Batches:  88%|████████▊ | 76/86 [01:17<00:01,  6.55it/s]Batches:  90%|████████▉ | 77/86 [01:17<00:01,  6.11it/s]Batches:  91%|█████████ | 78/86 [01:18<00:01,  6.19it/s]Batches:  92%|█████████▏| 79/86 [01:18<00:01,  6.65it/s]Batches:  93%|█████████▎| 80/86 [01:18<00:00,  7.04it/s]Batches:  94%|█████████▍| 81/86 [01:18<00:00,  7.63it/s]Batches:  95%|█████████▌| 82/86 [01:18<00:00,  8.10it/s]Batches:  97%|█████████▋| 83/86 [01:18<00:00,  8.12it/s]Batches:  98%|█████████▊| 84/86 [01:18<00:00,  8.30it/s]Batches:  99%|█████████▉| 85/86 [01:18<00:00,  8.74it/s]Batches: 100%|██████████| 86/86 [01:18<00:00,  1.09it/s]
+[gate] 41767 raw -> 5481 keyword -> 2500 semantic  (sentence-transformers (sentence-transformers/all-MiniLM-L6-v2))
+
+===== EXTRACT =====
+[llm] model rotation: ['gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-omni-flash-preview', 'gemini-omni-1.1-flash', 'gemini-flash-lite-latest', 'gemini-flash-latest', 'gemini-3.8-flash', 'gemini-3.7-flash', 'gemini-3.6-flash', 'gemini-3.5-flash-lite', 'gemini-3.5-flash', 'gemini-3.1-flash-lite-preview', 'gemini-3.1-flash-lite', 'gemini-3-flash-preview']
+[extract] 2500 gated, 0 cached, 2500 to code (gemini-2.5-flash)
+Direct use of automatic function calling (AFC) in Models.generate_content is not recommended. Instead, we recommend to use AFC in Chat.send_message. Similarly, direct use of AFC in Models.generate_content_stream is not recommended. Instead, we recommend to use AFC in Chat.send_message_stream.
+[extract] 35/2500 coded (35/35 returned)
+[extract] 70/2500 coded (35/35 returned)
+[extract] 105/2500 coded (35/35 returned)
+[llm] gemini/gemini-2.5-flash error #1: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/
+[llm] rotating to gemini/gemini-2.5-flash-lite
+[llm] gemini/gemini-2.5-flash-lite error #1: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code to use models/gemini-3.5-flash-lite for the latest features and impr
+[llm] rotating to gemini/gemini-omni-flash-preview
+[llm] gemini/gemini-omni-flash-preview error #1: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/
+[llm] rotating to gemini/gemini-omni-1.1-flash
+[llm] gemini/gemini-omni-1.1-flash error #1: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/
+[llm] rotating to gemini/gemini-flash-lite-latest
+[extract] 140/2500 coded (35/35 returned)
+[extract] 175/2500 coded (35/35 returned)
+[extract] 210/2500 coded (35/35 returned)
+[extract] 245/2500 coded (35/35 returned)
+[extract] 280/2500 coded (35/35 returned)
+[extract] 315/2500 coded (35/35 returned)
+[extract] 350/2500 coded (35/35 returned)
+[extract] 385/2500 coded (35/35 returned)
+[extract] 420/2500 coded (35/35 returned)
+[extract] 455/2500 coded (35/35 returned)
+[extract] 490/2500 coded (35/35 returned)
+[extract] 525/2500 coded (35/35 returned)
+[extract] 560/2500 coded (35/35 returned)
+[extract] 595/2500 coded (35/35 returned)
+[extract] 630/2500 coded (35/35 returned)
+[extract] 665/2500 coded (35/35 returned)
+[extract] 700/2500 coded (35/35 returned)
+[extract] 735/2500 coded (35/35 returned)
+[extract] 770/2500 coded (35/35 returned)
+[extract] 805/2500 coded (35/35 returned)
+[extract] 840/2500 coded (35/35 returned)
+[extract] 875/2500 coded (35/35 returned)
+[extract] 910/2500 coded (35/35 returned)
+[extract] 945/2500 coded (35/35 returned)
+[extract] 980/2500 coded (35/35 returned)
+[extract] 1015/2500 coded (35/35 returned)
+[extract] 1050/2500 coded (35/35 returned)
+[extract] 1085/2500 coded (35/35 returned)
+[extract] 1120/2500 coded (35/35 returned)
+[extract] 1155/2500 coded (35/35 returned)
+[extract] 1190/2500 coded (35/35 returned)
+[extract] 1225/2500 coded (35/35 returned)
+[extract] 1260/2500 coded (35/35 returned)
+[extract] 1295/2500 coded (35/35 returned)
+[extract] 1330/2500 coded (35/35 returned)
+[extract] 1365/2500 coded (35/35 returned)
+[extract] 1400/2500 coded (35/35 returned)
+[extract] 1435/2500 coded (35/35 returned)
+[extract] 1470/2500 coded (35/35 returned)
+[extract] 1505/2500 coded (35/35 returned)
+[extract] 1540/2500 coded (35/35 returned)
+[extract] 1575/2500 coded (35/35 returned)
+[extract] 1610/2500 coded (35/35 returned)
+[extract] 1645/2500 coded (35/35 returned)
+[extract] 1680/2500 coded (35/35 returned)
+[extract] 1715/2500 coded (35/35 returned)
+[extract] 1750/2500 coded (35/35 returned)
+[extract] 1785/2500 coded (35/35 returned)
+[extract] 1820/2500 coded (35/35 returned)
+[extract] 1855/2500 coded (35/35 returned)
+[extract] 1890/2500 coded (35/35 returned)
+[extract] 1925/2500 coded (35/35 returned)
+[extract] 1960/2500 coded (35/35 returned)
+[extract] 1995/2500 coded (35/35 returned)
+[extract] 2030/2500 coded (35/35 returned)
+[extract] 2065/2500 coded (34/35 returned)
+[extract] 2100/2500 coded (35/35 returned)
+[extract] 2135/2500 coded (35/35 returned)
+[extract] 2170/2500 coded (35/35 returned)
+[extract] 2205/2500 coded (35/35 returned)
+[extract] 2240/2500 coded (35/35 returned)
+[extract] 2275/2500 coded (35/35 returned)
+[extract] 2310/2500 coded (35/35 returned)
+[extract] 2345/2500 coded (35/35 returned)
+[extract] 2380/2500 coded (35/35 returned)
+[extract] 2415/2500 coded (35/35 returned)
+[extract] 2450/2500 coded (35/35 returned)
+[extract] 2485/2500 coded (35/35 returned)
+[extract] 2500/2500 coded (15/15 returned)
+[extract] tagged 2499; relevant 896; verified quotes 95%
+
+===== CLUSTER =====
+Batches:   0%|          | 0/14 [00:00<?, ?it/s]Batches:   7%|▋         | 1/14 [00:00<00:10,  1.20it/s]Batches:  14%|█▍        | 2/14 [00:01<00:08,  1.47it/s]Batches:  21%|██▏       | 3/14 [00:01<00:06,  1.62it/s]Batches:  29%|██▊       | 4/14 [00:02<00:05,  1.78it/s]Batches:  36%|███▌      | 5/14 [00:02<00:04,  1.89it/s]Batches:  43%|████▎     | 6/14 [00:03<00:04,  1.98it/s]Batches:  50%|█████     | 7/14 [00:03<00:03,  2.11it/s]Batches:  57%|█████▋    | 8/14 [00:04<00:02,  2.22it/s]Batches:  64%|██████▍   | 9/14 [00:04<00:02,  2.32it/s]Batches:  71%|███████▏  | 10/14 [00:04<00:01,  2.49it/s]Batches:  79%|███████▊  | 11/14 [00:05<00:01,  2.69it/s]Batches:  86%|████████▌ | 12/14 [00:05<00:00,  2.90it/s]Batches:  93%|█████████▎| 13/14 [00:05<00:00,  3.15it/s]Batches: 100%|██████████| 14/14 [00:05<00:00,  3.48it/s]Batches: 100%|██████████| 14/14 [00:05<00:00,  2.35it/s]
+/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/umap/umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+/opt/hostedtoolcache/Python/3.11.16/x64/lib/python3.11/site-packages/sklearn/cluster/_hdbscan/hdbscan.py:722: FutureWarning: The default value of `copy` will change from False to True in 1.10. Explicitly set a value for `copy` to silence this warning.
+  warn(
+[cluster] 14 themes from 896 relevant records (noise 14%)

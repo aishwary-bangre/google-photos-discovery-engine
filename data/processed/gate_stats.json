@@ -1,14 +1,16 @@
 {
-  "raw_records": 16778,
+  "raw_records": 41767,
   "raw_by_source": {
-    "play_store": 14325,
-    "app_store": 2453
+    "play_store": 38448,
+    "app_store": 1776,
+    "hacker_news": 1543
   },
-  "after_keyword_filter": 2041,
-  "after_semantic_gate": 1403,
+  "after_keyword_filter": 5481,
+  "after_semantic_gate": 2500,
   "gated_by_source": {
-    "play_store": 1048,
-    "app_store": 355
+    "play_store": 1919,
+    "hacker_news": 379,
+    "app_store": 202
   },
   "embedding_backend": "sentence-transformers (sentence-transformers/all-MiniLM-L6-v2)",
   "min_anchor_sim": 0.3
