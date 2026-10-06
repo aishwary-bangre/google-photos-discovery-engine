@@ -1,0 +1,55 @@
+name: Discovery pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      stages:
+        description: "Stages to run (space separated): collect gate extract cluster"
+        default: "collect gate extract cluster"
+      sources:
+        description: "Sources to collect (blank = all): play_store app_store reddit pullpush external"
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Restore LLM tag cache (lets reruns resume after quota limits)
+        uses: actions/cache@v4
+        with:
+          path: data/cache
+          key: llm-cache-${{ github.run_id }}
+          restore-keys: llm-cache-
+
+      - name: Install
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-pipeline.txt
+
+      - name: Run pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: |
+          SRC="${{ github.event.inputs.sources }}"
+          python -m pipeline.run --stages ${{ github.event.inputs.stages }} ${SRC:+--sources $SRC}
+
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "discovery-engine-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/raw/*.jsonl data/processed || true
+          git commit -m "Pipeline run ${{ github.run_number }}: refresh data" || echo "nothing to commit"
+          git push
