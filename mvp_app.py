@@ -117,7 +117,7 @@ KEYWORDS = {  # rule-based fallback when no LLM is available
 
 def rule_parse(memory: str) -> dict:
     t = memory.lower()
-    moms = [m for m, kws in KEYWORDS.items() if any(k in t for k in kws)]
+    moms = [m for m, kws in KEYWORDS.items() if any(re.search(rf"\b{re.escape(k)}\b", t) for k in kws)]
     kind = "screenshot" if "screenshot" in t or "sent me" in t or "chat" in t else (
         "document" if any(k in t for k in ("receipt", "bill", "ticket", "prescription", "document", "card")) else "any")
     return {"moments": moms, "date_from": None, "date_to": None, "kind": kind, "source": "any", "people": [],
