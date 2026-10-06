@@ -19,32 +19,36 @@ API = "https://commons.wikimedia.org/w/api.php"
 
 # (slug, query, how many)
 QUERIES = [
-    ("goa_beach", "Baga beach Goa", 4), ("goa_sunset", "sunset beach Goa", 3),
-    ("goa_cafe", "cafe interior Goa", 4), ("goa_fort", "Fort Aguada Goa", 2),
-    ("goa_food", "Goan fish curry thali", 2), ("goa_scooter", "scooter Goa road", 2),
-    ("goa_church", "Basilica of Bom Jesus", 2),
-    ("diwali_diya", "Diwali diya lamps", 3), ("diwali_rangoli", "rangoli Diwali", 2),
-    ("sweets", "Indian sweets mithai", 2),
-    ("mehendi", "mehndi hands bride", 2), ("wedding_decor", "Indian wedding decoration mandap", 3),
-    ("wedding_food", "Indian wedding buffet food", 2),
-    ("manali_temple", "Hidimba Devi Temple", 2), ("manali_snow", "Solang valley snow", 3),
-    ("manali_river", "Beas river Manali", 2), ("manali_cafe", "Old Manali cafe", 2),
-    ("bengaluru_metro", "Namma Metro Bangalore train", 2), ("office", "office desk laptop monitor", 3),
-    ("campus", "university campus India building", 3), ("fest", "college fest concert stage crowd India", 2),
-    ("library", "library reading room students", 2), ("dosa", "masala dosa", 2), ("chai", "masala chai cup", 2),
-    ("biryani", "Hyderabadi biryani", 2), ("dog", "Labrador retriever dog", 5),
-    ("monsoon", "monsoon rain street Pune", 2), ("sunset_city", "Pune skyline sunset", 2),
+    ("goa_cafe", "Fontainhas Panaji", 3), ("goa_cafe", "cafe coffee cup table", 3),
+    ("goa_cafe", "coffee shop interior", 2), ("wedding_food", "Indian thali", 2),
+    ("manali_cafe", "cafe Himachal", 2), ("campus", "College of Engineering Pune", 2),
+    ("campus", "IIT Bombay campus", 2), ("fest", "concert crowd stage lights", 2),
+    ("library", "library interior books", 2), ("dosa", "dosa", 2), ("chai", "chai glass", 2),
+    ("biryani", "biryani", 2), ("dog", "Labrador Retriever", 5), ("monsoon", "rain street Mumbai", 2),
+    ("friends", "friends group selfie", 2), ("birthday", "birthday cake candles", 2),
+    ("wedding_decor", "wedding marigold decoration", 2),
 ]
 BAD = re.compile(r"map|logo|diagram|chart|svg|flag|coat of arms|stamp|poster|drawing|painting|plan|seal", re.I)
 
 
 def search(q, n):
+    for attempt in range(4):
+        try:
+            return _search(q, n)
+        except Exception as e:  # noqa: BLE001
+            print("retry", q, e)
+            time.sleep(10 * (attempt + 1))
+    return []
+
+
+def _search(q, n):
     params = {
         "action": "query", "format": "json", "generator": "search", "gsrsearch": f"filetype:bitmap {q}",
         "gsrnamespace": 6, "gsrlimit": 30, "prop": "imageinfo",
         "iiprop": "url|mime|size|extmetadata", "iiurlwidth": 480,
     }
     r = requests.get(API, params=params, headers=UA, timeout=30)
+    r.raise_for_status()
     pages = sorted(r.json().get("query", {}).get("pages", {}).values(), key=lambda p: p.get("index", 0))
     out = []
     for p in pages:
@@ -72,7 +76,7 @@ def main():
             print("error", slug, e)
             continue
         for i, it in enumerate(items):
-            fn = f"{slug}_{i}.jpg"
+            fn = f"{slug}_{abs(hash(it['title'])) % 10**6}.jpg"
             try:
                 img = requests.get(it["thumb"], headers=UA, timeout=30)
                 if img.status_code != 200:
@@ -83,7 +87,10 @@ def main():
                 continue
             results.append({"file": f"scenes/{fn}", "slug": slug, "query": q, **it})
         print(f"{slug}: {len(items)}")
-        time.sleep(1)
+        time.sleep(3)
+    prev = json.loads((OUT / "scenes_raw.json").read_text()) if (OUT / "scenes_raw.json").exists() else []
+    seen = {p["title"] for p in prev}
+    results = prev + [r for r in results if r["title"] not in seen]
     (OUT / "scenes_raw.json").write_text(json.dumps(results, indent=1, ensure_ascii=False))
     print("total", len(results))
 

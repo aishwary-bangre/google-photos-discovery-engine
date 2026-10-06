@@ -1,0 +1,254 @@
+[
+ {
+  "file": "utility/rx_feb26.jpg",
+  "date": "2026-02-11T18:20",
+  "source": "camera",
+  "moment": "sick_feb26",
+  "caption": "photo of a doctor's prescription paper on a table",
+  "ocr": "Dr. Meera Kulkarni prescription Azithral Dolo 650 Cetirizine",
+  "purpose": "medical record"
+ },
+ {
+  "file": "utility/strip_feb26.jpg",
+  "date": "2026-02-11T19:02",
+  "source": "camera",
+  "moment": "sick_feb26",
+  "caption": "close-up of a silver tablet strip",
+  "ocr": "AZITHRAL 500 mg",
+  "purpose": "medicine to remember"
+ },
+ {
+  "file": "utility/pharmacy_feb26.jpg",
+  "date": "2026-02-11T19:05",
+  "source": "camera",
+  "moment": "sick_feb26",
+  "caption": "photo of a printed shop receipt",
+  "ocr": "CITY MEDICOS pharmacy bill Azithral Dolo",
+  "purpose": "bill"
+ },
+ {
+  "file": "utility/lab_feb26.jpg",
+  "date": "2026-02-12T11:40",
+  "source": "whatsapp",
+  "moment": "sick_feb26",
+  "caption": "photo of a printed document with a table of values",
+  "ocr": "PRIME DIAGNOSTICS blood test report WBC",
+  "purpose": "medical record"
+ },
+ {
+  "file": "utility/strip_aug25.jpg",
+  "date": "2025-08-03T21:10",
+  "source": "camera",
+  "moment": "hostel_life",
+  "caption": "close-up of a silver tablet strip",
+  "ocr": "ALLEGRA 120 mg",
+  "purpose": "medicine to remember"
+ },
+ {
+  "file": "utility/strip_nov24.jpg",
+  "date": "2024-11-18T08:30",
+  "source": "camera",
+  "moment": "home",
+  "caption": "close-up of a silver tablet strip",
+  "ocr": "PAN-D 40 mg",
+  "purpose": "medicine for mom"
+ },
+ {
+  "file": "utility/rent_jun26.jpg",
+  "date": "2026-06-05T20:15",
+  "source": "camera",
+  "moment": "internship_blr",
+  "caption": "photo of a printed shop receipt",
+  "ocr": "SAI COMFORT PG rent Jun 2026 HSR Layout",
+  "purpose": "rent proof"
+ },
+ {
+  "file": "utility/rent_jul26.jpg",
+  "date": "2026-07-05T20:15",
+  "source": "camera",
+  "moment": "internship_blr",
+  "caption": "photo of a printed shop receipt",
+  "ocr": "SAI COMFORT PG rent Jul 2026 HSR Layout",
+  "purpose": "rent proof"
+ },
+ {
+  "file": "utility/rent_aug26.jpg",
+  "date": "2026-08-04T20:15",
+  "source": "camera",
+  "moment": "internship_blr",
+  "caption": "photo of a printed shop receipt",
+  "ocr": "SAI COMFORT PG rent Aug 2026 HSR Layout",
+  "purpose": "rent proof"
+ },
+ {
+  "file": "utility/rent_pay_jun26.jpg",
+  "date": "2026-06-05T20:11",
+  "source": "screenshot",
+  "moment": "internship_blr",
+  "caption": "phone screenshot of a payment app",
+  "ocr": "Payment successful 15,120 Sai Comfort PG June rent",
+  "purpose": "rent proof"
+ },
+ {
+  "file": "utility/pay_0.jpg",
+  "date": "2025-09-14T17:40",
+  "source": "screenshot",
+  "moment": "hostel_life",
+  "caption": "phone screenshot of a payment app",
+  "ocr": "Payment successful 450 Ravi Tea Stall Chai + maggi",
+  "purpose": "payment proof"
+ },
+ {
+  "file": "utility/pay_1.jpg",
+  "date": "2025-12-21T22:05",
+  "source": "screenshot",
+  "moment": "goa_trip",
+  "caption": "phone screenshot of a payment app",
+  "ocr": "Payment successful 2300 Rohan Mehta Goa trip share",
+  "purpose": "payment proof"
+ },
+ {
+  "file": "utility/pay_2.jpg",
+  "date": "2025-12-19T21:30",
+  "source": "screenshot",
+  "moment": "goa_trip",
+  "caption": "phone screenshot of a payment app",
+  "ocr": "Payment successful 780 Café Bodega Dinner",
+  "purpose": "payment proof"
+ },
+ {
+  "file": "utility/pay_3.jpg",
+  "date": "2025-02-08T13:12",
+  "source": "screenshot",
+  "moment": "hostel_life",
+  "caption": "phone screenshot of a payment app",
+  "ocr": "Payment successful 1200 Ananya Rao Fest tickets",
+  "purpose": "payment proof"
+ },
+ {
+  "file": "utility/pay_4.jpg",
+  "date": "2025-08-21T16:02",
+  "source": "screenshot",
+  "moment": "hostel_life",
+  "caption": "phone screenshot of a payment app",
+  "ocr": "Payment successful 349 Bookworm Store DSA book",
+  "purpose": "payment proof"
+ },
+ {
+  "file": "utility/pay_5.jpg",
+  "date": "2025-07-28T11:20",
+  "source": "screenshot",
+  "moment": "hostel_life",
+  "caption": "phone screenshot of a payment app",
+  "ocr": "Payment successful 5600 Westbrook Institute Hostel mess fee",
+  "purpose": "payment proof"
+ },
+ {
+  "file": "utility/wifi_chat.jpg",
+  "date": "2025-09-02T21:05",
+  "source": "screenshot",
+  "moment": "hostel_life",
+  "caption": "phone screenshot of a chat conversation",
+  "ocr": "wifi pwd for the new router is WingC@5G_2025",
+  "purpose": "save password"
+ },
+ {
+  "file": "utility/address_chat.jpg",
+  "date": "2025-12-19T17:22",
+  "source": "screenshot",
+  "moment": "goa_trip",
+  "caption": "phone screenshot of a chat conversation",
+  "ocr": "Bodega Café Fontainhas Panaji near the yellow church",
+  "purpose": "save address"
+ },
+ {
+  "file": "utility/prof_chat.jpg",
+  "date": "2025-10-09T10:31",
+  "source": "screenshot",
+  "moment": "hostel_life",
+  "caption": "phone screenshot of a chat conversation",
+  "ocr": "Assignment 3 deadline extended to 14 Oct",
+  "purpose": "deadline"
+ },
+ {
+  "file": "utility/notes_dbms.jpg",
+  "date": "2025-09-23T11:05",
+  "source": "camera",
+  "moment": "hostel_life",
+  "caption": "photo of a whiteboard with handwriting",
+  "ocr": "DBMS Normalisation 1NF 2NF 3NF BCNF",
+  "purpose": "class notes"
+ },
+ {
+  "file": "utility/notes_os.jpg",
+  "date": "2025-10-07T09:40",
+  "source": "camera",
+  "moment": "hostel_life",
+  "caption": "photo of a blackboard with chalk writing",
+  "ocr": "OS Deadlock conditions mutual exclusion hold and wait",
+  "purpose": "class notes"
+ },
+ {
+  "file": "utility/notes_cn.jpg",
+  "date": "2025-10-15T14:20",
+  "source": "camera",
+  "moment": "hostel_life",
+  "caption": "photo of a whiteboard with handwriting",
+  "ocr": "CN TCP 3-way handshake SYN ACK",
+  "purpose": "class notes"
+ },
+ {
+  "file": "utility/train_ticket.jpg",
+  "date": "2025-12-10T22:40",
+  "source": "download",
+  "moment": "goa_trip",
+  "caption": "photo of a printed ticket",
+  "ocr": "PNR train Pune Madgaon Riya Sharma 18 Dec 2025",
+  "purpose": "travel ticket"
+ },
+ {
+  "file": "utility/flight_ticket.jpg",
+  "date": "2026-05-30T23:10",
+  "source": "download",
+  "moment": "internship_blr",
+  "caption": "image of a boarding pass",
+  "ocr": "Boarding pass PNQ BLR flight SK 517 01 Jun 2026",
+  "purpose": "travel ticket"
+ },
+ {
+  "file": "utility/movie_ticket.jpg",
+  "date": "2026-01-24T19:00",
+  "source": "screenshot",
+  "moment": "hostel_life",
+  "caption": "phone screenshot of a ticket",
+  "ocr": "CINEMAX Interstellar IMAX Phoenix Mall",
+  "purpose": "ticket"
+ },
+ {
+  "file": "utility/college_id.jpg",
+  "date": "2024-08-05T10:00",
+  "source": "camera",
+  "moment": "hostel_life",
+  "caption": "photo of an identity card",
+  "ocr": "Westbrook Institute of Technology Student ID Riya Sharma",
+  "purpose": "ID proof"
+ },
+ {
+  "file": "utility/hostel_fee.jpg",
+  "date": "2025-07-28T12:00",
+  "source": "camera",
+  "moment": "hostel_life",
+  "caption": "photo of a printed shop receipt",
+  "ocr": "WESTBROOK INSTITUTE Hostel fee receipt Sem 5",
+  "purpose": "fee proof"
+ },
+ {
+  "file": "utility/cafe_bill_goa.jpg",
+  "date": "2025-12-19T21:25",
+  "source": "camera",
+  "moment": "goa_trip",
+  "caption": "photo of a printed shop receipt",
+  "ocr": "BODEGA CAFE Fontainhas Panaji Bebinca",
+  "purpose": "bill"
+ }
+]
