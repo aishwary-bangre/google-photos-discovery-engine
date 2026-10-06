@@ -175,11 +175,15 @@ with tabs[1]:
                 text=cues["Forgotten"], textposition="outside", cliponaxis=False)
     fig.update_layout(barmode="group", title="Memory cues mentioned (a record can mention several)", bargap=0.25)
     st.plotly_chart(style(fig, 460), use_container_width=True)
-    ctx = rel["cues_remembered"].map(lambda l: bool(set(l) & CONTEXT_CUES)).mean()
-    content = rel["cues_remembered"].map(lambda l: bool(set(l) & {"visual_content", "text_in_image", "place"})).mean()
-    a, b = st.columns(2)
-    a.metric("Records remembering *context* (who / when / why / what was happening / source app)", f"{ctx:.0%}")
-    b.metric("Records remembering *content* (what's visible / text / place)", f"{content:.0%}")
+    spec = rel[rel["cues_remembered"].map(lambda l: any(c != "nothing_specific" for c in l))]
+    ctx = spec["cues_remembered"].map(lambda l: bool(set(l) & CONTEXT_CUES)).mean()
+    content = spec["cues_remembered"].map(lambda l: bool(set(l) & {"visual_content", "text_in_image", "place"})).mean()
+    typed = rel[rel["query_style"] != "none"]
+    ctxq = (typed["query_style"] == "context_description").mean() if len(typed) else 0
+    a, b, c = st.columns(3)
+    a.metric(f"Remember *context* (when-ish / who / why / source app) — of {len(spec)} stating a cue", f"{ctx:.0%}")
+    b.metric("Remember *content* (what's visible / text / place)", f"{content:.0%}")
+    c.metric(f"Typed searches that describe context — of {len(typed)} quoted searches", f"{ctxq:.0%}")
 
     # RQ4
     st.subheader("RQ4 · How do people phrase searches when memory is incomplete?")
