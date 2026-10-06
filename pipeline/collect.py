@@ -8,7 +8,9 @@ source blocks us, the run continues with the others and the failure is logged.
 from __future__ import annotations
 
 import hashlib
+import html
 import json
+import re
 import time
 from datetime import datetime, timezone
 
@@ -240,7 +242,35 @@ def import_external() -> int:
     return _write("external", records)
 
 
+# ---------------------------------------------------------------- Hacker News
+def collect_hn() -> int:
+    """Hacker News comments/stories via the public Algolia API (long, specific stories)."""
+    records = []
+    for q in C.HN_QUERIES:
+        for tags in ("comment", "story"):
+            try:
+                r = requests.get("https://hn.algolia.com/api/v1/search",
+                                 params={"query": q, "tags": tags, "hitsPerPage": 200}, headers=UA, timeout=30)
+                hits = r.json().get("hits", []) if r.status_code == 200 else []
+            except Exception as e:  # noqa: BLE001
+                print(f"[collect] hn error: {e}")
+                hits = []
+            for h in hits:
+                text = re.sub(r"<[^>]+>", " ", html.unescape(h.get("comment_text") or h.get("story_text") or ""))
+                if "photo" not in (text + (h.get("title") or "")).lower():
+                    continue
+                records.append({
+                    "id": _rid("hn", h.get("objectID", "")), "source": "hacker_news",
+                    "text": text, "title": h.get("title") or h.get("story_title") or "",
+                    "rating": None, "date": h.get("created_at"),
+                    "url": f"https://news.ycombinator.com/item?id={h.get('objectID')}", "meta": {},
+                })
+            time.sleep(0.5)
+    return _write("hacker_news", records)
+
+
 COLLECTORS = {
+    "hacker_news": collect_hn,
     "play_store": collect_playstore,
     "app_store": collect_appstore,
     "reddit": collect_reddit,

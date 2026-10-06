@@ -17,7 +17,7 @@ from pydantic import ValidationError
 
 from . import config as C
 from . import llm
-from .schema import CODEBOOK, BatchResult, RecordTag
+from .schema import CODEBOOK, CODEBOOK_VERSION, BatchResult, RecordTag
 
 CACHE = C.CACHE_DIR / "tags.jsonl"
 SYSTEM = ("You are a UX researcher coding user feedback about finding old photos in Google Photos. "
@@ -35,7 +35,8 @@ def _load_cache() -> dict[str, dict]:
     for line in CACHE.read_text(encoding="utf-8").splitlines():
         if line.strip():
             d = json.loads(line)
-            out[d["id"]] = d
+            if d.get("cb") == CODEBOOK_VERSION:
+                out[d["id"]] = d
     return out
 
 
@@ -70,8 +71,11 @@ def run() -> pd.DataFrame:
           f"({'MOCK' if mock else llm.model_name()})")
 
     texts = dict(zip(gated["id"], gated["full_text"]))
-    for start in range(0, len(todo), C.LLM_BATCH_SIZE):
-        batch = todo.iloc[start:start + C.LLM_BATCH_SIZE]
+    start = 0
+    while start < len(todo):
+        size = 10 if (not mock and llm.current_provider() == "groq") else C.LLM_BATCH_SIZE
+        batch = todo.iloc[start:start + size]
+        start += size
         ids = set(batch["id"])
         if mock:
             rows = [_mock_tag(r) for r in batch.to_dict("records")]
@@ -94,10 +98,10 @@ def run() -> pd.DataFrame:
             q = _norm(r.get("evidence_quote"))
             r["quote_verified"] = bool(q) and q in _norm(texts.get(r["id"], ""))
             r["model"] = "mock" if mock else llm.model_name()
+            r["cb"] = CODEBOOK_VERSION
         _append_cache(rows)
         cache.update({r["id"]: r for r in rows})
-        done = min(start + C.LLM_BATCH_SIZE, len(todo))
-        print(f"[extract] {done}/{len(todo)} coded")
+        print(f"[extract] {min(start, len(todo))}/{len(todo)} coded ({len(rows)}/{len(batch)} returned)")
 
     tags = pd.DataFrame([cache[i] for i in gated["id"] if i in cache])
     if tags.empty:

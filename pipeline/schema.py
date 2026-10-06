@@ -68,13 +68,16 @@ class BatchResult(BaseModel):
     results: list[RecordTag]
 
 
+CODEBOOK_VERSION = 2
 CODEBOOK = """
 CODEBOOK (use exactly these labels)
 
-relevant: true ONLY if the author describes trying to find / retrieve a specific photo, video or
-screenshot that already exists in their library (including complaints that search can't find things).
-false for: backup/sync failures, storage/pricing, editing, crashes, sharing, general praise, deleted photos
-they want restored (unless they are searching for them).
+relevant: true ONLY if the author describes DIFFICULTY finding / retrieving a photo, video or screenshot
+that exists (or they believe exists) in their library: search that fails, endless scrolling to locate
+something, not knowing how to look for it, results they can't sift. Complaints that the redesign makes
+photos hard to find count.
+false for: praise ("easy to find my photos"), backup/sync failures, storage/pricing, editing, crashes,
+sharing, Memories feature complaints, photos lost because the phone was lost/reset, deleted photos.
 
 photo_type: document_id | medical | receipt_payment | notes_study | screenshot_info | travel_place |
 people_event | pet | food | video | other | unspecified

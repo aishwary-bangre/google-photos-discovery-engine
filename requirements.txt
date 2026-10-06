@@ -5,3 +5,4 @@ plotly>=5.20
 scikit-learn>=1.4
 pydantic>=2.6
 google-genai>=1.0
+groq>=0.11

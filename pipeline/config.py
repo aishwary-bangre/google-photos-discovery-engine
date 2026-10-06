@@ -12,8 +12,8 @@ for d in (RAW_DIR, PROC_DIR, CACHE_DIR):
 
 # ---------- Sources ----------
 PLAY_APP_ID = "com.google.android.apps.photos"
-PLAY_COUNTRIES = ["in", "us", "gb"]
-PLAY_REVIEWS_PER_COUNTRY = int(os.environ.get("PLAY_REVIEWS_PER_COUNTRY", 25000))
+PLAY_COUNTRIES = ["us", "in"]
+PLAY_REVIEWS_PER_COUNTRY = int(os.environ.get("PLAY_REVIEWS_PER_COUNTRY", 80000))
 
 APPSTORE_APP_ID = "962194608"  # Google Photos on iOS
 APPSTORE_COUNTRIES = ["us", "in", "gb", "ca", "au"]
@@ -58,8 +58,11 @@ GEMINI_MODELS = [m for m in [
     "gemini-2.5-flash-lite",
     "gemini-2.0-flash",
 ] if m]
-LLM_BATCH_SIZE = int(os.environ.get("LLM_BATCH_SIZE", 20))
-LLM_MIN_INTERVAL_S = float(os.environ.get("LLM_MIN_INTERVAL_S", 6.5))  # free-tier friendly
+LLM_BATCH_SIZE = int(os.environ.get("LLM_BATCH_SIZE", 35))
+LLM_MIN_INTERVAL_S = float(os.environ.get("LLM_MIN_INTERVAL_S", 4.0))  # free-tier friendly
 
 # ---------- Embeddings ----------
 EMBED_MODEL = os.environ.get("EMBED_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
+
+HN_QUERIES = ["google photos search", "google photos find photo", "find old photo phone",
+              "photo search app", "search my photos", "can't find photo"]
