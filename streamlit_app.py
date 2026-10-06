@@ -354,5 +354,4 @@ with tabs[5]:
                 st.json(tag.model_dump())
 
 st.divider()
-st.caption("Built for a product research case study. Sources are public reviews and posts; links open the original. "
-           "Code: github.com/aishwary-bangre/google-photos-discovery-engine")
+st.caption("Built for a product research case study. Sources are public reviews and posts; links open the original.")

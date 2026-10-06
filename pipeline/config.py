@@ -54,9 +54,9 @@ MIN_ANCHOR_SIM = float(os.environ.get("MIN_ANCHOR_SIM", 0.30))
 # ---------- LLM ----------
 GEMINI_MODELS = [m for m in [
     os.environ.get("GEMINI_MODEL"),
+    "gemini-flash-latest",
+    "gemini-flash-lite-latest",
     "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-2.0-flash",
 ] if m]
 LLM_BATCH_SIZE = int(os.environ.get("LLM_BATCH_SIZE", 35))
 LLM_MIN_INTERVAL_S = float(os.environ.get("LLM_MIN_INTERVAL_S", 4.0))  # free-tier friendly
