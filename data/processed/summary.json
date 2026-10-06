@@ -1,0 +1,74 @@
+{
+  "n_tagged": 379,
+  "n_relevant": 204,
+  "relevance_rate": 0.5382585751978892,
+  "by_source": {
+    "play_store": 183,
+    "app_store": 21
+  },
+  "photo_type": {
+    "unspecified": 162,
+    "people_event": 14,
+    "other": 14,
+    "video": 5,
+    "screenshot_info": 4,
+    "pet": 2,
+    "travel_place": 2,
+    "document_id": 1
+  },
+  "failure_stage": {
+    "interpret": 54,
+    "browse": 49,
+    "unclear": 44,
+    "access": 31,
+    "express": 21,
+    "evaluate": 4,
+    "refine": 1
+  },
+  "outcome": {
+    "gave_up": 154,
+    "found": 19,
+    "found_with_effort": 16,
+    "unknown": 15
+  },
+  "workaround": {
+    "none_mentioned": 168,
+    "scroll_timeline": 19,
+    "other_app": 5,
+    "gave_up": 4,
+    "albums": 3,
+    "people_faces": 2,
+    "other": 2,
+    "date_jump": 1
+  },
+  "query_style": {
+    "none": 149,
+    "content_keyword": 28,
+    "person": 12,
+    "date_or_place": 12,
+    "context_description": 3
+  },
+  "cues_remembered": {
+    "nothing_specific": 104,
+    "time_approx": 50,
+    "visual_content": 29,
+    "people": 12,
+    "purpose": 6,
+    "event_context": 5,
+    "source_app": 5,
+    "text_in_image": 4,
+    "place": 3,
+    "life_chapter": 1
+  },
+  "cues_missing": {
+    "nothing_specific": 137,
+    "time_approx": 3,
+    "place": 1,
+    "visual_content": 1
+  },
+  "n_clusters": 10,
+  "noise_share": 0.06372549019607843,
+  "quote_verified_rate": 0.9411764705882353,
+  "model": "gemini-2.5-flash",
+  "embedding_backend": "sentence-transformers (sentence-transformers/all-MiniLM-L6-v2)"
+}

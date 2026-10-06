@@ -1,0 +1,11 @@
+cluster,theme,problem,mismatch,n,share,severity,urgency_norm,gave_up_rate,top_stage,top_photo_type,raw_score,opportunity
+4,Cluster 4,The user is unsure how to view their old pictures.,,67,0.3284313725490196,0.8537313432835821,0.5373134328358209,0.7313432835820896,unclear,unspecified,0.15065847234416155,100.0
+6,Cluster 6,The user cannot easily find photos due to the continuous scrolling timeline without date separation.,,30,0.14705882352941177,0.8766666666666667,0.5333333333333333,0.7333333333333333,browse,unspecified,0.06875816993464053,45.6
+1,Cluster 1,The search function does not return expected results for keywords.,,15,0.07352941176470588,1.0,0.5777777777777778,1.0,interpret,unspecified,0.04248366013071896,28.2
+8,Cluster 8,The search feature is not effective enough to locate specific photos.,,14,0.06862745098039216,0.9357142857142857,0.5952380952380952,0.8571428571428571,interpret,unspecified,0.038223622782446315,25.4
+3,Cluster 3,The search option for finding photos of specific people is no longer available.,,12,0.058823529411764705,0.9666666666666667,0.638888888888889,0.9166666666666666,express,unspecified,0.03632897603485839,24.1
+7,Cluster 7,"Photos are not organized by category as claimed, making it difficult to find needed items.",,16,0.0784313725490196,0.8125,0.5625,0.625,browse,unspecified,0.035845588235294115,23.8
+5,Cluster 5,The user cannot locate the search option within the app.,,9,0.04411764705882353,1.0,0.6296296296296297,1.0,express,unspecified,0.02777777777777778,18.4
+9,Cluster 9,The search function fails to find photos that the user knows exist in their library.,,10,0.049019607843137254,1.0,0.5333333333333333,1.0,interpret,unspecified,0.026143790849673203,17.4
+2,Cluster 2,The search feature fails to return comprehensive results for date-based queries and lacks flexibility for text-based searches with spelling variations.,,7,0.03431372549019608,1.0,0.5714285714285714,1.0,interpret,people_event,0.0196078431372549,13.0
+0,Cluster 0,null,,11,0.05392156862745098,0.2,0.3636363636363636,0.0,unclear,unspecified,0.00392156862745098,2.6

@@ -1,0 +1,15 @@
+{
+  "raw_records": 16778,
+  "raw_by_source": {
+    "play_store": 14325,
+    "app_store": 2453
+  },
+  "after_keyword_filter": 2041,
+  "after_semantic_gate": 1403,
+  "gated_by_source": {
+    "play_store": 1048,
+    "app_store": 355
+  },
+  "embedding_backend": "sentence-transformers (sentence-transformers/all-MiniLM-L6-v2)",
+  "min_anchor_sim": 0.3
+}
